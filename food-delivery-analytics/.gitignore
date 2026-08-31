@@ -1,0 +1,10 @@
+__pycache__/
+.env
+.venv/
+data/raw/
+data/cleaned/
+data/processed/
+*.pyc
+*.sqlite3
+.DS_Store
+.vscode/

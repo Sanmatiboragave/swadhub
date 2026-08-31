@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Food Delivery Analytics — Dashboard Prototype</title>
+    <script src="https://cdn.plot.ly/plotly-2.24.2.min.js"></script>
+    <style>body{font-family:Arial; margin:20px;} #charts{display:flex;flex-wrap:wrap;gap:20px;} .chart{width:48%;min-width:320px}</style>
+  </head>
+  <body>
+    <h1>Food Delivery Analytics — Dashboard Prototype</h1>
+    <div id="charts">
+      <div id="daily" class="chart"></div>
+      <div id="value" class="chart"></div>
+      <div id="top_restaurants" class="chart" style="width:100%"></div>
+    </div>
+
+    <script>
+      async function fetchJSON(path){
+        const res = await fetch(path);
+        return res.json();
+      }
+
+      async function draw(){
+        // Assumes API is available at /aggregates
+        const daily = await fetchJSON('/aggregates/daily');
+        const values = daily.map(r=>({date: r.date, orders: r.orders_count, revenue: r.revenue}));
+        const dates = values.map(v=>v.date);
+        const orders = values.map(v=>v.orders);
+        const revenue = values.map(v=>v.revenue);
+
+        Plotly.newPlot('daily',[{x:dates,y:orders,type:'scatter',name:'orders'},{x:dates,y:revenue,type:'scatter',name:'revenue',yaxis:'y2'}],{title:'Daily orders & revenue',yaxis:{title:'orders'},yaxis2:{overlaying:'y',side:'right',title:'revenue'}});
+
+        const ordersVals = (await fetchJSON('/aggregates/top-restaurants')).slice(0,10);
+        Plotly.newPlot('top_restaurants',[{x:ordersVals.map(r=>r.revenue),y:ordersVals.map(r=>String(r.restaurant_id)),type:'bar',orientation:'h'}],{title:'Top restaurants by revenue'});
+
+        // Order value distribution loaded from CSV download
+        const csv = await fetch('/aggregates/download/avg_order_value_by_day.csv');
+        const csvText = await csv.text();
+        // crude CSV parse
+        const rows = csvText.split('\n').slice(1).map(r=>r.split(','));
+        const vals = rows.map(r=>parseFloat(r[1])).filter(v=>!isNaN(v));
+        Plotly.newPlot('value',[{x:vals,type:'histogram'}],{title:'Avg order value distribution'});
+      }
+      draw().catch(e=>{document.body.insertAdjacentHTML('beforeend','<pre>'+e+'</pre>')});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+customer_id,first_name,last_name,email,phone,gender,date_of_birth,city,signup_date,customer_segment,preferred_cuisine,total_orders,total_spend,average_order_value,last_order_date
+1,Danielle,Johnson,john21@example.net,158189600133890,other,1965-08-26,lisatown,2025-07-24 22:42:54,low,Chinese,4,48.65,12.16,2025-12-14 22:42:54
+2,Katherine,Moore,jpeterson@example.org,,male,1988-03-20,barbaraland,2024-11-24 13:27:59,mid,Fast Food,1,9.48,9.48,2026-01-31 13:27:59
+3,Brandon,Perez,tracie31@example.com,5754255341928,male,1982-02-08,veronicaside,2025-04-07 14:06:44,low,Fast Food,3,54.7,18.23,2026-11-03 14:06:44
+4,Jeffrey,Nguyen,perezantonio@example.com,54163953767242,female,2001-06-26,hurstfurt,2026-02-20 05:56:00,mid,Italian,3,35.24,11.75,2027-10-17 05:56:00
+5,Michael,Osborn,williamdavis@example.org,9226691669,female,1988-04-18,lake nicoleview,2023-09-13 23:01:53,low,South Indian,1,19.87,19.87,2024-08-27 23:01:53
+6,Kayla,Peterson,ryan70@example.net,124872814893252,male,1983-11-25,west natashaport,2023-09-26 09:08:01,high,Chinese,2,19.48,9.74,2024-10-20 09:08:01
+7,John,Allen,millertodd@example.org,,other,1996-05-10,samuelhaven,2026-06-01 16:11:53,low,Chinese,1,21.72,21.72,2027-09-15 16:11:53
+8,Shannon,Wright,morganbrianna@example.org,13305103105,other,1969-08-07,lewisberg,2026-07-01 08:17:14,high,North Indian,1,17.38,17.38,2028-04-05 08:17:14
+9,Jennifer,Khan,esanchez@example.com,3112656670,other,1978-01-18,east jamesside,2025-02-04 05:06:21,low,South Indian,2,39.96,19.98,2025-03-23 05:06:21
+10,Shane,Henderson,steven17@example.net,9085013267,female,1977-12-09,south aaron,2023-11-26 05:04:27,low,North Indian,2,45.08,22.54,2024-03-09 05:04:27
+11,Peter,House,smitchell@example.net,12727343098,male,1954-07-16,shawhaven,2023-11-13 00:25:47,mid,Chinese,1,10.77,10.77,2024-11-11 00:25:47
+12,Eric,Yu,yorkcasey@example.org,,other,1964-07-19,johnfurt,2026-07-02 12:10:55,mid,Beverages,0,0.0,0.0,
+13,David,Brewer,wstewart@example.org,6794911838,female,1974-05-26,west justin,2023-12-11 23:42:50,low,South Indian,4,43.11,10.78,2025-01-03 23:42:50
+14,Samuel,Daniels,cheryl80@example.net,16416241182,male,1991-10-23,jamesview,2024-07-19 07:49:50,mid,Fast Food,2,23.47,11.73,2025-06-17 07:49:50
+15,William,King,davisrodney@example.com,2053242786,male,1955-10-09,new barry,2026-08-04 14:04:00,low,Chinese,1,14.82,14.82,2026-10-11 14:04:00
+16,Mike,Tran,tanderson@example.com,4535315869,female,1961-09-16,johnsonmouth,2024-05-28 03:58:43,low,Beverages,3,40.05,13.35,2026-03-31 03:58:43
+17,Kimberly,Jenkins,josephcobb@example.org,70763375433036,male,1955-05-17,darlenefurt,2024-11-02 17:31:19,high,Italian,2,20.86,10.43,2025-03-25 17:31:19
+18,Erin,Anthony,sheila14@example.org,13408196556,female,1989-11-20,bradleychester,2024-06-17 09:38:18,low,Beverages,6,107.63,17.94,2026-02-05 09:38:18
+19,Aaron,Frost,michaeljones@example.net,895814846564823,male,1996-09-27,richardtown,2024-05-23 11:11:51,high,South Indian,1,16.66,16.66,2024-08-25 11:11:51
+20,Kevin,Clark,steven73@example.net,22124895134332,other,1967-04-24,south robertshire,2025-09-03 05:21:17,low,South Indian,1,21.47,21.47,2026-11-10 05:21:17
+21,James,Horton,jross@example.net,19014632870831,male,2005-03-09,stephaniemouth,2025-08-17 22:08:36,low,Italian,2,33.99,17.0,2027-03-07 22:08:36
+22,Cheyenne,Ball,jrivas@example.com,6779434873,female,1955-12-03,west matthew,2024-11-12 23:42:20,low,Fast Food,2,41.53,20.77,2026-08-31 23:42:20
+23,Patricia,Miller,jessebenson@example.net,5168658760,other,1977-02-25,port nicoleshire,2026-02-19 11:02:48,low,Italian,1,8.06,8.06,2026-11-16 11:02:48
+24,Omar,Smith,kenneth66@example.net,148993734670656,other,1959-05-03,south brittanytown,2026-04-19 18:24:32,low,North Indian,3,68.4,22.8,2027-02-19 18:24:32
+25,Christopher,Patterson,qwhite@example.com,737555646417080,other,1994-11-22,port anthonybury,2023-12-11 17:15:58,low,Chinese,4,83.85,20.96,2025-06-16 17:15:58
+26,James,Smith,johnwells@example.org,14376452991,female,1958-01-02,west barbarafurt,2026-02-11 01:55:07,low,Italian,1,8.33,8.33,2027-02-18 01:55:07
+27,Randy,Espinoza,vargasmaria@example.org,7493190586,other,1985-01-29,alexanderchester,2026-05-29 01:09:01,low,Fast Food,3,72.29,24.1,2026-08-25 01:09:01
+28,Lynn,Garcia,cynthia72@example.com,6847987769,other,2008-08-10,west nicolebury,2024-09-11 11:42:40,low,Fast Food,1,21.02,21.02,2025-01-21 11:42:40
+29,Karen,Hudson,frogers@example.com,2735545494,female,1956-06-22,freemanbury,2024-09-05 01:23:37,low,Chinese,4,67.88,16.97,2026-05-20 01:23:37
+30,Hannah,Brewer,bwest@example.org,73673495788568,female,1998-06-24,kristopherbury,2025-07-31 23:50:15,high,Beverages,4,78.91,19.73,2026-06-16 23:50:15
+31,David,Lee,newtonstephanie@example.net,3335749894,male,1970-10-23,harrytown,2024-08-14 12:10:30,mid,Italian,2,46.59,23.3,2025-11-20 12:10:30
+32,Jean,Martinez,mccannangela@example.net,7714094777,male,1954-02-22,wilsonland,2024-09-22 08:03:52,low,North Indian,0,0.0,0.0,
+33,Richard,Jones,hernandezlisa@example.com,8319869993,male,1980-10-10,torreston,2024-12-01 01:06:58,low,Beverages,0,0.0,0.0,
+34,Chelsea,Singh,colleenbaker@example.org,9326812067,female,1952-11-14,jasminemouth,2024-08-20 17:02:51,low,Chinese,2,18.41,9.21,2025-04-21 17:02:51
+35,Charles,Hall,kristin93@example.com,6836242102,other,1980-07-14,barkerfurt,2024-03-07 07:13:42,low,South Indian,2,40.59,20.3,2025-10-13 07:13:42
+36,Sherri,Mason,mkim@example.org,959940139904902,other,1969-07-30,waltersfort,2024-06-04 01:23:37,mid,Italian,2,22.47,11.23,2024-09-12 01:23:37
+37,Tanya,Harrison,qcook@example.org,3567746807,other,1967-10-29,port richardhaven,2025-01-10 07:30:30,low,Italian,1,22.69,22.69,2025-03-07 07:30:30
+38,Mallory,Smith,mgutierrez@example.net,3972703482477,male,1993-07-10,lake eric,2026-03-29 23:22:08,mid,North Indian,5,74.22,14.84,2027-03-12 23:22:08
+39,Andrea,Tran,walkermaureen@example.org,4128748467737,female,1963-08-15,port chad,2026-03-15 05:24:16,low,Italian,4,41.53,10.38,2026-09-19 05:24:16
+40,Kendra,Dickerson,sarah84@example.org,84999727875588,other,1972-07-18,new patrick,2024-06-15 04:27:29,mid,North Indian,0,0.0,0.0,
+41,Melissa,Jenkins,julie66@example.net,122740289517187,male,1978-07-20,north terrance,2026-06-09 07:00:18,mid,Fast Food,1,22.21,22.21,2026-09-13 07:00:18
+42,Tanya,Morgan,vsantos@example.net,16655780913,male,2001-06-19,goodville,2024-01-14 12:34:25,low,South Indian,2,45.4,22.7,2024-03-15 12:34:25
+43,Scott,Benson,williamslaura@example.com,8565238692221,female,1984-07-07,east steven,2026-02-18 00:39:42,high,Chinese,2,47.5,23.75,2027-05-30 00:39:42
+44,Jonathan,Scott,nolansteven@example.com,,female,1966-10-16,baileyport,2025-04-10 13:16:46,high,Fast Food,0,0.0,0.0,
+45,Andrew,Greer,khill@example.net,,male,2004-04-25,new michaelberg,2025-07-11 22:04:04,low,North Indian,2,35.69,17.84,2027-01-18 22:04:04
+46,Christopher,Phillips,ithompson@example.net,4885424745171,male,1996-09-03,coffeyside,2026-07-09 18:40:28,low,Fast Food,2,32.21,16.11,2028-01-04 18:40:28
+47,Michael,Gibbs,bakerdavid@example.com,,other,1998-05-11,wilsonton,2024-12-08 13:27:15,low,South Indian,3,27.49,9.16,2025-02-16 13:27:15
+48,Sophia,Torres,pwilson@example.net,3679586926,male,1992-07-18,antoniostad,2025-05-22 02:39:03,low,Fast Food,1,12.19,12.19,2027-01-21 02:39:03
+49,Jeff,Wallace,melissagarcia@example.net,2852064317139,female,2004-03-10,east kristin,2025-01-26 05:06:38,low,Fast Food,0,0.0,0.0,
+50,Jamie,Gallegos,brendali@example.org,729504228421020,female,1990-09-21,east josephberg,2025-01-11 02:03:47,low,Beverages,2,26.68,13.34,2025-10-10 02:03:47
+51,Judy,Fox,alvarezkimberly@example.net,19172839084,male,1954-10-15,simmonsville,2025-09-09 04:43:40,mid,Italian,2,26.75,13.38,2025-11-23 04:43:40
+52,Tracy,Browning,lammarc@example.org,6249998569,other,1985-01-19,garciaville,2026-03-24 14:56:05,high,North Indian,1,9.25,9.25,2026-10-29 14:56:05
+53,Melissa,Curtis,russellbeasley@example.com,376361565452711,female,1980-01-15,lisaside,2024-01-24 03:10:15,high,North Indian,3,68.84,22.95,2025-02-06 03:10:15
+54,Brian,Frye,elizabeth65@example.net,,other,2008-03-05,dannyview,2026-01-07 06:04:05,mid,Beverages,2,26.29,13.14,2027-11-08 06:04:05
+55,Audrey,Aguirre,,16996809402,male,1973-10-10,east mollyshire,2025-02-22 10:05:23,mid,Chinese,3,71.52,23.84,2025-06-09 10:05:23
+56,Diane,Jones,davisalyssa@example.com,275325459910229,female,1969-03-02,tuckermouth,2025-07-15 11:26:13,mid,Beverages,2,34.81,17.41,2026-04-20 11:26:13
+57,Robert,Lewis,reeddaniel@example.net,,female,1970-05-07,north tylerchester,2025-01-17 20:16:34,mid,South Indian,0,0.0,0.0,
+58,Gregory,James,vincentwhitaker@example.com,8608607159,female,1998-12-06,robertsfurt,2026-05-17 13:11:57,low,North Indian,2,19.14,9.57,2027-07-25 13:11:57
+59,Andrew,Nguyen,xcollier@example.org,313369681645352,male,1986-10-04,port michael,2025-10-27 07:22:44,low,South Indian,1,18.83,18.83,2026-07-23 07:22:44
+60,Jessica,Fuentes,joelthomas@example.org,9927127799,male,1993-05-01,south carlos,2024-12-30 05:30:01,low,Italian,1,17.54,17.54,2025-04-24 05:30:01
+61,Scott,Turner,brittany58@example.org,97720054119986,other,1981-04-03,west cassidy,2026-01-31 03:53:38,mid,South Indian,3,51.83,17.28,2027-02-14 03:53:38
+62,Walter,Rosario,vgarcia@example.net,4827037788,female,1976-01-09,ortizmouth,2024-11-08 14:01:30,low,North Indian,1,13.24,13.24,2024-12-19 14:01:30
+63,Erika,Williams,cameron18@example.net,34469251925462,female,1988-09-07,lisahaven,2025-04-03 06:36:37,low,North Indian,4,56.05,14.01,2026-10-29 06:36:37
+64,Clarence,Santiago,andrew42@example.org,473832214188805,female,1961-02-22,port heather,2024-05-05 04:00:09,mid,South Indian,2,45.4,22.7,2024-11-03 04:00:09
+65,Colleen,Orr,xwilliams@example.net,193799473834735,female,2003-01-04,shawchester,2024-11-06 20:11:58,mid,Chinese,0,0.0,0.0,
+66,Tammy,Montoya,moniquewilliams@example.com,8813814124782,female,1965-10-04,sarahchester,2025-07-27 22:15:30,mid,South Indian,4,50.14,12.54,2025-11-15 22:15:30
+67,Brian,Shaw,paulmiller@example.org,4519522047,female,1981-03-06,north andrewborough,2026-04-09 00:50:02,mid,South Indian,5,56.96,11.39,2027-07-25 00:50:02
+68,Mary,Dunn,srodriguez@example.org,51043697117980,male,1970-06-21,new michaelshire,2025-06-23 22:10:26,mid,South Indian,2,23.58,11.79,2027-04-30 22:10:26
+69,Robert,Beck,millsmichael@example.net,17886806706,female,2001-07-03,kristinastad,2023-09-21 08:32:32,low,North Indian,0,0.0,0.0,
+70,John,Sandoval,ingramjill@example.com,4053852772,other,1999-05-18,west jamesborough,2025-08-07 02:31:10,low,Beverages,0,0.0,0.0,
+71,Nina,Stewart,zachary87@example.com,8348505415,male,2001-03-26,morganburgh,2025-07-10 05:33:28,low,Chinese,1,11.04,11.04,2026-04-08 05:33:28
+72,Tyler,Jimenez,laurie61@example.com,18284451154479,other,1997-08-03,sergiostad,2025-07-16 17:05:31,low,Beverages,1,21.37,21.37,2026-10-06 17:05:31
+73,Christina,Graham,jonesdana@example.com,220429702135569,other,1996-11-10,nathanland,2025-07-26 01:19:01,low,Fast Food,2,22.46,11.23,2025-09-10 01:19:01
+74,Audrey,Moreno,redwards@example.org,6029786814,male,1965-04-02,heatherfort,2026-04-03 15:25:22,low,Fast Food,2,39.35,19.68,2028-02-19 15:25:22
+75,James,Taylor,hayesrachel@example.com,4557188442,female,1985-04-09,east laurabury,2024-08-09 11:19:17,low,Beverages,5,118.27,23.65,2026-05-10 11:19:17
+76,Kristy,Johnson,tanner82@example.net,3144678669,female,1972-03-22,south stevenhaven,2026-05-20 23:06:23,low,Chinese,1,16.62,16.62,2028-04-02 23:06:23
+77,Melvin,Humphrey,katrinaanderson@example.net,7186242253,other,2008-03-19,jamesside,2023-12-27 15:05:54,mid,Fast Food,2,20.33,10.16,2025-03-02 15:05:54
+78,Joshua,Weber,shawgary@example.net,2296959001,female,1994-12-16,montgomerytown,2024-07-19 14:29:38,mid,South Indian,4,73.86,18.46,2025-05-24 14:29:38
+79,Tyler,Burton,dawn47@example.org,,other,1999-07-15,theresaberg,2025-01-04 03:57:57,low,Chinese,1,11.57,11.57,2026-08-21 03:57:57
+80,Kathleen,Robertson,floressteven@example.com,7325104696325,female,2002-07-31,ferrellmouth,2024-04-30 15:42:13,low,Italian,2,38.97,19.48,2025-10-06 15:42:13
+81,Victor,Parker,davisphillip@example.com,9396500479,female,1987-03-04,south dennisview,2023-09-08 19:51:49,high,Beverages,1,10.88,10.88,2023-12-04 19:51:49
+82,Jessica,Gallagher,brandon09@example.net,6583416878,other,1959-05-28,brooksmouth,2024-01-24 07:32:06,mid,Chinese,4,38.35,9.59,2024-09-21 07:32:06
+83,Angela,Diaz,jameshicks@example.net,4007257872,female,1992-05-14,south vicki,2025-01-02 22:38:54,mid,South Indian,5,42.08,8.42,2025-09-10 22:38:54
+84,Jodi,Evans,william88@example.com,19946705516940,other,1995-04-06,lake brett,2026-02-10 18:04:27,mid,Italian,2,30.09,15.04,2027-11-17 18:04:27
+85,Timothy,Warren,rhernandez@example.org,8915307562,other,1978-07-29,salaston,2025-10-14 16:10:30,mid,Italian,1,14.79,14.79,2026-03-15 16:10:30
+86,Janice,Stone,whitney78@example.com,627585854973348,male,1970-11-26,lake janet,2024-11-18 01:50:35,mid,North Indian,3,63.7,21.23,2025-07-01 01:50:35
+87,Logan,Bailey,keith98@example.com,65264041574733,male,1959-12-28,east brent,2024-02-12 19:15:00,mid,Italian,2,17.71,8.86,2024-10-25 19:15:00
+88,Rebecca,Perez,briangutierrez@example.net,21230826773454,other,1995-01-14,new joanne,2026-02-04 00:13:51,mid,Beverages,5,85.15,17.03,2027-08-31 00:13:51
+89,Melissa,Johnson,robertmonroe@example.org,97244004991547,female,2008-07-25,nelsonville,2025-10-18 09:23:56,mid,Italian,5,92.08,18.42,2027-03-19 09:23:56
+90,Mark,Simon,jennifer05@example.com,18323966851,female,1963-03-23,morrisbury,2024-04-01 13:22:43,low,South Indian,5,103.21,20.64,2025-08-01 13:22:43
+91,Adam,Reyes,vmolina@example.com,16904453017,female,1978-03-28,hannahport,2026-07-27 21:39:59,low,Beverages,1,12.71,12.71,2028-01-12 21:39:59
+92,Michael,Walker,timothygibson@example.net,7683783391878,male,1989-01-15,port amyhaven,2024-02-17 10:26:06,low,North Indian,0,0.0,0.0,
+93,James,Herrera,markmeyer@example.org,,male,1996-06-06,south jonathantown,2024-12-17 20:22:55,low,Fast Food,1,9.37,9.37,2025-05-21 20:22:55
+94,Julie,Lane,hendersonisabella@example.net,7178046226,female,1981-03-04,millerside,2025-04-04 13:04:19,low,South Indian,2,18.18,9.09,2026-05-27 13:04:19
+95,Dean,Dalton,whiteamanda@example.net,8305047868,other,1967-06-29,ericborough,2025-08-11 16:20:35,low,South Indian,1,22.16,22.16,2026-09-14 16:20:35
+96,Sharon,Hardy,johnsondonna@example.net,,male,1987-05-19,east williamport,2024-07-29 15:22:16,low,Fast Food,0,0.0,0.0,
+97,Jim,Hendricks,barbara53@example.com,4838644089,other,1988-06-22,west shellyfurt,2025-10-05 01:04:13,low,Italian,2,45.02,22.51,2026-12-09 01:04:13
+98,Kristi,Flores,trussell@example.com,8878334270,male,1988-07-28,south john,2025-11-27 10:30:54,low,Fast Food,2,46.53,23.27,2027-04-11 10:30:54
+99,James,Lucas,fboone@example.net,193054699013983,female,1973-04-22,east sharonville,2024-12-10 02:39:24,low,Italian,1,13.71,13.71,2026-11-06 02:39:24
+100,Julie,Webster,heatherpadilla@example.com,6857467854,other,1985-07-19,garciafort,2025-10-07 14:49:45,mid,South Indian,0,0.0,0.0,

@@ -1,0 +1,51 @@
+restaurant_id,restaurant_name,description,city,area,cuisine,rating,number_of_reviews,average_price,delivery_time_minutes,distance_km,commission_rate,restaurant_status
+1,Rocha-Wood Kitchen,Reduced optimal success,Williamsbury,Allen Plaza,Continental,5.0,124,416.35,53,8.12,0.18,open
+2,Phillips-Gonzalez Zaika,Synergized global extranet,South Ashley,Victor Shoal,Desserts,4.01,114,231.78,39,3.49,0.22,open
+3,Levy-May Bhojan,Pre-emptive contextually-based moratorium,Murraystad,Donald Plains,Biryani,3.78,101,492.55,20,4.86,0.25,open
+4,"Bernard, Warren and Combs Kitchen",Focused asymmetric strategy,Port Elizabethtown,Taylor Roads,Desserts,3.61,108,158.72,51,6.7,0.22,open
+5,Smith PLC Kitchen,Reactive incremental access,Brooksfort,Smith Place,North Indian,4.16,127,489.4,20,11.42,0.2,closed
+6,Moreno LLC Hub,Progressive coherent encoding,Andrechester,Daniel Court,Chinese,4.19,124,257.35,51,5.95,0.18,open
+7,Harvey LLC Zaika,Persevering non-volatile encryption,Josephfurt,Nathan Lodge,Desserts,3.63,129,464.76,22,9.32,0.2,open
+8,"Perez, Sutton and Abbott House",Total composite artificial intelligence,North Richardfurt,Brown Branch,South Indian,3.88,103,500.01,53,2.38,0.22,open
+9,Bruce-Newman Kitchen,Team-oriented non-volatile leverage,Arielville,Jerry Ways,Fast Food,3.35,118,409.11,33,10.94,0.25,open
+10,Williams-Jones House,Intuitive 3rdgeneration database,Rachelshire,Harry Vista,Italian,4.77,94,184.2,48,8.44,0.2,open
+11,"Thomas, Hoover and Nicholson Bhojan",Managed human-resource system engine,West Franciscobury,Rhodes Plains,South Indian,4.03,133,508.3,58,7.01,0.18,open
+12,"Taylor, Hinton and Ramsey Corner",Robust zero administration pricing structure,Brianchester,Mary Junctions,Biryani,3.9,123,181.03,35,7.95,0.18,closed
+13,"Sanders, Ayala and Johnson Corner",Multi-tiered intermediate contingency,Kristenmouth,Perez Plaza,South Indian,3.05,125,345.09,47,4.67,0.25,open
+14,"Willis, James and Barton Corner",Universal zero tolerance productivity,Laurenland,Joseph Light,Chinese,4.34,116,480.21,35,11.6,0.22,open
+15,Singh LLC Hub,Future-proofed bi-directional capacity,Danieltown,Wallace Trace,Desserts,3.76,114,359.19,37,10.0,0.22,open
+16,Lopez Group Zaika,Right-sized zero tolerance Graphic Interface,Garcialand,Spencer Ranch,South Indian,3.69,126,275.52,31,5.68,0.25,open
+17,Smith-Gutierrez House,Devolved encompassing framework,Lake Rachelbury,Gina Extension,Continental,4.18,131,301.38,40,6.18,0.22,open
+18,Snyder-Brown Zaika,Function-based dynamic success,Hillport,Patton Lake,Biryani,4.28,117,509.02,27,4.41,0.22,open
+19,"Simpson, Jensen and Ellis Hub",Multi-tiered full-range intranet,West Adam,Cook River,Italian,3.67,140,188.53,46,8.78,0.25,open
+20,Jordan-Colon Zaika,Object-based foreground frame,West Malik,Timothy Fall,Desserts,4.78,129,440.66,30,6.14,0.18,open
+21,"Neal, Henry and Johnston Zaika",Exclusive optimizing moratorium,West Nicholas,Diaz Port,Continental,4.01,132,461.3,44,4.02,0.22,open
+22,Maldonado PLC Hub,Team-oriented asymmetric utilization,Lake Stevenborough,Salinas Village,Biryani,3.88,102,341.48,43,9.08,0.22,open
+23,Chambers-Taylor Corner,Organized radical matrices,Johnberg,Mccormick Cliffs,Fast Food,4.96,118,287.98,45,3.15,0.2,open
+24,"Morales, Hunter and Knapp House",Switchable static help-desk,Stephensstad,Daniel Gateway,Chinese,4.6,128,236.19,23,8.99,0.22,open
+25,Holland Inc Hub,Fundamental directional migration,Rasmussenmouth,Rodriguez Courts,Fast Food,3.65,121,591.23,34,10.08,0.22,open
+26,"Stone, Carpenter and Johnston Zaika",Polarized bi-directional frame,Brooksmouth,Michael Burg,Fast Food,3.85,105,156.37,43,6.64,0.22,open
+27,Knapp-Miller Kitchen,Polarized grid-enabled leverage,West Larry,Mueller Pike,Fast Food,4.31,103,463.84,48,1.95,0.25,open
+28,Kim Ltd Kitchen,Ameliorated global project,Floresport,Lisa Crescent,Fast Food,3.78,132,361.23,37,5.57,0.2,busy
+29,Byrd and Sons Bhojan,Persistent discrete website,New Greg,Mark Meadow,Desserts,4.58,129,201.34,30,1.25,0.25,open
+30,Soto-Lopez House,Adaptive tertiary data-warehouse,Fosterborough,Vargas Loaf,North Indian,2.98,137,218.28,50,9.83,0.22,open
+31,Ramirez Ltd Zaika,Persevering bifurcated firmware,New Cristianside,Michael Flat,South Indian,3.85,119,401.13,34,5.29,0.2,open
+32,"Huffman, Rose and Fowler Corner",Persevering regional conglomeration,Carrshire,Michael Vista,Desserts,4.64,116,558.83,42,3.92,0.25,open
+33,"Mccarthy, Evans and Mendez Hub",Multi-layered system-worthy circuit,Lake Dennisville,Kevin Falls,North Indian,3.83,150,424.33,39,9.01,0.2,open
+34,"Price, Carlson and Andrews Bhojan",Horizontal client-driven contingency,Lopezside,Angela Overpass,South Indian,4.03,122,220.68,44,2.5,0.18,open
+35,Wilkinson-Harvey Corner,Realigned motivating projection,Stephaniefort,James Lights,Desserts,5.0,126,460.22,39,5.9,0.18,open
+36,Ortiz-Vasquez House,Implemented 5thgeneration focus group,Burnsland,Laura Forges,Fast Food,4.6,137,466.34,53,5.72,0.2,busy
+37,Medina and Sons House,Vision-oriented needs-based hierarchy,Cunninghamfort,Ashley Grove,Italian,3.94,124,341.31,44,6.76,0.2,busy
+38,"Carson, Williams and Ball Zaika",Organized empowering hardware,South Curtis,Kenneth Bypass,South Indian,3.92,115,176.84,21,9.62,0.22,open
+39,Gonzales Inc Corner,Self-enabling interactive concept,East Lisa,Callahan Ridge,Fast Food,3.04,131,464.88,38,11.34,0.25,open
+40,"Taylor, Clark and Clark Hub",Implemented explicit orchestration,New Michaelview,Mario Squares,North Indian,4.37,117,550.24,49,8.95,0.22,open
+41,Farley-Robertson Zaika,Streamlined clear-thinking standardization,East Sydneychester,Victoria Way,North Indian,3.96,107,599.81,32,8.23,0.22,open
+42,Wright Ltd Zaika,Future-proofed responsive instruction set,Mariafurt,Thomas Roads,Desserts,4.17,119,383.53,34,5.59,0.22,open
+43,Hayes-Schultz Hub,Inverse optimal ability,South Zacharyview,Gibson Oval,Continental,3.95,134,435.65,34,6.15,0.18,open
+44,"Davis, Stanton and Reid Corner",Extended modular flexibility,Melissaside,Robinson Meadow,Biryani,4.76,143,294.48,38,1.7,0.2,open
+45,Clayton-Morgan House,Business-focused 6thgeneration attitude,New Melissa,Shannon Track,Desserts,3.84,106,279.7,20,11.37,0.18,open
+46,"Bowers, Stevens and Martinez Bhojan",De-engineered solution-oriented framework,South Stephen,Harris Spurs,Fast Food,3.32,126,295.47,40,11.66,0.25,closed
+47,Baxter LLC Kitchen,Down-sized actuating infrastructure,Lake Michaelland,Beck Run,Desserts,3.59,126,335.96,31,2.66,0.22,open
+48,"Torres, Lyons and Young Corner",Face-to-face multi-state software,Lake Codyborough,Miller Ramp,Desserts,4.06,133,492.0,50,2.84,0.2,busy
+49,Smith-Dominguez Corner,Cross-group upward-trending workforce,Port Robertberg,Jones Lights,Desserts,4.51,117,204.64,36,11.69,0.2,open
+50,Garcia LLC Bhojan,Advanced reciprocal projection,Derrickberg,Casey Port,North Indian,4.74,110,398.51,43,1.57,0.18,open

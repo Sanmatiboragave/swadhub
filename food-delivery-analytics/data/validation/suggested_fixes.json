@@ -1,0 +1,169 @@
+{
+  "order_outliers": [
+    {
+      "order_id": 6,
+      "total_amount": 2110.06,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 50,
+      "total_amount": 1995.08,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 51,
+      "total_amount": 2421.86,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 63,
+      "total_amount": 2148.68,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 70,
+      "total_amount": 2173.09,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 140,
+      "total_amount": 2141.31,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 221,
+      "total_amount": 1812.98,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 239,
+      "total_amount": 2483.91,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 282,
+      "total_amount": 1889.66,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 367,
+      "total_amount": 2434.08,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 391,
+      "total_amount": 2640.7,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 409,
+      "total_amount": 1760.88,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 454,
+      "total_amount": 1902.71,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 476,
+      "total_amount": 1842.18,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 478,
+      "total_amount": 2581.04,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 521,
+      "total_amount": 2825.68,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 530,
+      "total_amount": 2705.39,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 532,
+      "total_amount": 1767.02,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 549,
+      "total_amount": 2082.36,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 575,
+      "total_amount": 1918.64,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 599,
+      "total_amount": 1759.36,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 638,
+      "total_amount": 2148.21,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 740,
+      "total_amount": 1852.63,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 783,
+      "total_amount": 2145.81,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 806,
+      "total_amount": 2240.69,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 811,
+      "total_amount": 2127.15,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 812,
+      "total_amount": 1869.04,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 820,
+      "total_amount": 2162.16,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 828,
+      "total_amount": 2784.79,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 875,
+      "total_amount": 2209.28,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 919,
+      "total_amount": 2334.97,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 985,
+      "total_amount": 2022.83,
+      "flag_reason": "high_outlier"
+    },
+    {
+      "order_id": 991,
+      "total_amount": 2665.25,
+      "flag_reason": "high_outlier"
+    }
+  ]
+}

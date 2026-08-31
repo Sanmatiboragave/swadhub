@@ -1,0 +1,62 @@
+[
+  {
+    "id": "T-001",
+    "subject": "Site is completely down for our whole team",
+    "body": "We can't log in at all since about 20 minutes ago. Getting a 500 error on the login page. This is blocking our entire team from working. Please fix ASAP."
+  },
+  {
+    "id": "T-002",
+    "subject": "Charged twice for August subscription",
+    "body": "I was charged $49 twice on August 3rd for my Pro plan. Can you refund the duplicate charge? Transaction IDs are 88213 and 88214."
+  },
+  {
+    "id": "T-003",
+    "subject": "How do I export my data to CSV?",
+    "body": "Hi, I'm trying to find the export button in the dashboard but can't locate it. Is this a Pro-only feature or available on the free plan too?"
+  },
+  {
+    "id": "T-004",
+    "subject": "Feature request: dark mode",
+    "body": "Would love to see a dark mode option in settings. Not urgent, just a nice-to-have. Loving the product otherwise!"
+  },
+  {
+    "id": "T-005",
+    "subject": "Can't reset my password",
+    "body": "I clicked 'forgot password' three times and never got the reset email. Checked spam too. I need to get back into my account today for a client presentation."
+  },
+  {
+    "id": "T-006",
+    "subject": "urgent!!!",
+    "body": "this is urgent please respond. the button color looks a bit off on my screen, is that supposed to happen?"
+  },
+  {
+    "id": "T-007",
+    "subject": "Data export shows wrong totals",
+    "body": "When I export the monthly report to CSV, the totals column doesn't match what's shown in the dashboard. Dashboard says $12,400, CSV export says $9,800. This is a real bug, not a formatting issue."
+  },
+  {
+    "id": "T-008",
+    "subject": "Need to update billing address",
+    "body": "Can you update the billing address on file for our account? New address is 221 Baker Street, Suite 4, London."
+  },
+  {
+    "id": "T-009",
+    "subject": "Possible security issue",
+    "body": "I noticed I can see another user's project name in my sidebar for a split second when the page loads. Not sure if this is a real leak or just a rendering glitch, but wanted to flag it given it could be sensitive data exposure."
+  },
+  {
+    "id": "T-010",
+    "subject": "Question about enterprise pricing",
+    "body": "We're a 200-person company evaluating your tool. Could someone send over enterprise pricing and SSO support details?"
+  },
+  {
+    "id": "T-011",
+    "subject": "App crashes when uploading large files",
+    "body": "Every time I try to upload a file over ~50MB the app freezes and I have to refresh. Happens consistently on Chrome and Firefox, both on Mac. Really disrupting my workflow this week."
+  },
+  {
+    "id": "T-012",
+    "subject": "thanks",
+    "body": "just wanted to say the new update is great, no issues, keep it up"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "category": "Technical",
+    "urgency": "Critical",
+    "confidence": 0.95,
+    "reasoning": "Reported site outage / login failures blocking users.",
+    "needs_human_review": false,
+    "routed_team": "Engineering",
+    "subject": "Site is completely down for our whole team",
+    "id": "T-001"
+  },
+  {
+    "category": "Billing",
+    "urgency": "High",
+    "confidence": 0.9,
+    "reasoning": "User reports duplicate or incorrect charge.",
+    "needs_human_review": false,
+    "routed_team": "Finance",
+    "subject": "Charged twice for August subscription",
+    "id": "T-002"
+  },
+  {
+    "category": "Bug Report",
+    "urgency": "High",
+    "confidence": 0.85,
+    "reasoning": "Exported data mismatch vs dashboard totals indicates a bug.",
+    "needs_human_review": false,
+    "routed_team": "Engineering",
+    "subject": "How do I export my data to CSV?",
+    "id": "T-003"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.8,
+    "reasoning": "Feature request / enhancement.",
+    "needs_human_review": false,
+    "routed_team": "Support (L1)",
+    "subject": "Feature request: dark mode",
+    "id": "T-004"
+  },
+  {
+    "category": "Account",
+    "urgency": "High",
+    "confidence": 0.9,
+    "reasoning": "User cannot access account; reset email not received.",
+    "needs_human_review": false,
+    "routed_team": "Customer Success",
+    "subject": "Can't reset my password",
+    "id": "T-005"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.2,
+    "reasoning": "User claims urgency but describes a cosmetic issue; low confidence.",
+    "needs_human_review": true,
+    "routed_team": "Support (L1)",
+    "subject": "urgent!!!",
+    "id": "T-006"
+  },
+  {
+    "category": "Bug Report",
+    "urgency": "High",
+    "confidence": 0.85,
+    "reasoning": "Exported data mismatch vs dashboard totals indicates a bug.",
+    "needs_human_review": false,
+    "routed_team": "Engineering",
+    "subject": "Data export shows wrong totals",
+    "id": "T-007"
+  },
+  {
+    "category": "Billing",
+    "urgency": "High",
+    "confidence": 0.9,
+    "reasoning": "User reports duplicate or incorrect charge.",
+    "needs_human_review": false,
+    "routed_team": "Finance",
+    "subject": "Need to update billing address",
+    "id": "T-008"
+  },
+  {
+    "category": "Bug Report",
+    "urgency": "Critical",
+    "confidence": 0.4,
+    "reasoning": "Possible data exposure reported; flagging for human review.",
+    "needs_human_review": true,
+    "routed_team": "Engineering",
+    "subject": "Possible security issue",
+    "id": "T-009"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.5,
+    "reasoning": "Heuristic fallback classification in mock mode.",
+    "needs_human_review": true,
+    "routed_team": "Support (L1)",
+    "subject": "Question about enterprise pricing",
+    "id": "T-010"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.5,
+    "reasoning": "Heuristic fallback classification in mock mode.",
+    "needs_human_review": true,
+    "routed_team": "Support (L1)",
+    "subject": "App crashes when uploading large files",
+    "id": "T-011"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.99,
+    "reasoning": "Positive feedback, no action required.",
+    "needs_human_review": false,
+    "routed_team": "Support (L1)",
+    "subject": "thanks",
+    "id": "T-012"
+  }
+]

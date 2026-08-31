@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+alembic
+pandas
+numpy
+faker
+matplotlib
+seaborn
+plotly
+jupyter
+pytest
+python-dotenv

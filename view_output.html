@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Ticket Triage Output</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 24px; background: #f5f7fb; color: #202124; }
+    h1 { margin-bottom: 0.25em; }
+    p { margin-top: 0; color: #555; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1em; }
+    th, td { border: 1px solid #d1d5db; padding: 10px; text-align: left; vertical-align: top; }
+    th { background: #eef2ff; color: #111827; }
+    tr:nth-child(even) { background: #ffffff; }
+    tr:nth-child(odd) { background: #f9fafb; }
+    code { background: #eef2ff; padding: 2px 4px; border-radius: 4px; }
+    .flagged { color: #b91c1c; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Ticket Triage Output</h1>
+  <p>This is a browser-friendly view of <code>results/output.json</code>.</p>
+  <div id="summary"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Subject</th>
+        <th>Category</th>
+        <th>Urgency</th>
+        <th>Confidence</th>
+        <th>Team</th>
+        <th>Review</th>
+        <th>Reasoning</th>
+      </tr>
+    </thead>
+    <tbody id="results-body"></tbody>
+  </table>
+  <script>
+    const output = [
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXUAeHWvTphGv5kKTwL'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "Site is completely down for our whole team",
+        "id": "T-001"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXUVjVUMDPJTbeTwbn8'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "Charged twice for August subscription",
+        "id": "T-002"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXUq5q1w5tw392BDvbf'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "How do I export my data to CSV?",
+        "id": "T-003"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXVAjGfg35o2iZ5rkRG'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "Feature request: dark mode",
+        "id": "T-004"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXVWWeeX9zPY5wn8o9N'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "Can't reset my password",
+        "id": "T-005"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXVqzRkVaPs74JPuQge'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "urgent!!!",
+        "id": "T-006"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXWBUScWAnxbKc1bNSv'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "Data export shows wrong totals",
+        "id": "T-007"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXWXrJCGp54qfE8tAKZ'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "Need to update billing address",
+        "id": "T-008"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXWrUUC17BBGmAKUsRd'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "Possible security issue",
+        "id": "T-009"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXXBNGyiumzMQm6x6H9'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "Question about enterprise pricing",
+        "id": "T-010"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXXYNpdM8PSPnhRmJjF'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "App crashes when uploading large files",
+        "id": "T-011"
+      },
+      {
+        "category": "General Inquiry",
+        "urgency": "Medium",
+        "confidence": 0.0,
+        "reasoning": "Agent failed to classify after 3 attempts: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CdoXXxZcdBWWQbfEyATq2'}",
+        "needs_human_review": true,
+        "routed_team": "Support (L1)",
+        "subject": "thanks",
+        "id": "T-012"
+      }
+    ];
+
+    const summary = document.getElementById('summary');
+    const flagged = output.filter(item => item.needs_human_review).length;
+    summary.innerHTML = `<strong>${output.length}</strong> tickets, <strong>${flagged}</strong> flagged for human review.`;
+
+    const tbody = document.getElementById('results-body');
+    output.forEach(item => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${item.id}</td>
+        <td>${item.subject}</td>
+        <td>${item.category}</td>
+        <td>${item.urgency}</td>
+        <td>${item.confidence.toFixed(2)}</td>
+        <td>${item.routed_team}</td>
+        <td class="${item.needs_human_review ? 'flagged' : ''}">${item.needs_human_review}</td>
+        <td>${item.reasoning.replace(/\n/g, '<br>')}</td>
+      `;
+      tbody.appendChild(row);
+    });
+  </script>
+</body>
+</html>

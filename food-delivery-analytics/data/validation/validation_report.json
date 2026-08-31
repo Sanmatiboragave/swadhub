@@ -1,0 +1,421 @@
+{
+  "customers": {
+    "rows": 100,
+    "columns": 15,
+    "duplicates": 0,
+    "missing_by_column": {
+      "customer_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "first_name": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "last_name": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "email": {
+        "missing": 1,
+        "pct": 1.0
+      },
+      "phone": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "gender": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "date_of_birth": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "city": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "signup_date": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "customer_segment": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "preferred_cuisine": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "total_orders": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "total_spend": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "average_order_value": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "last_order_date": {
+        "missing": 13,
+        "pct": 13.0
+      }
+    }
+  },
+  "deliveries": {
+    "rows": 1000,
+    "columns": 7,
+    "duplicates": 0,
+    "missing_by_column": {
+      "order_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "partner_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "assigned_at": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "pickup_time": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "delivered_time": {
+        "missing": 37,
+        "pct": 3.7
+      },
+      "delivery_distance_km": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "delivery_status": {
+        "missing": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "food_items": {
+    "rows": 200,
+    "columns": 11,
+    "duplicates": 0,
+    "missing_by_column": {
+      "food_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "restaurant_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "food_name": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "category": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "cuisine": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "vegetarian": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "price": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "rating": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "calories": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "preparation_time": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "available": {
+        "missing": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "image_searches": {
+    "rows": 200,
+    "columns": 10,
+    "duplicates": 0,
+    "missing_by_column": {
+      "image_search_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "customer_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "image_path": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "predicted_food": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "confidence_score": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "search_timestamp": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "selected_food": {
+        "missing": 132,
+        "pct": 66.0
+      },
+      "restaurant_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "converted_to_order": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "order_id": {
+        "missing": 177,
+        "pct": 88.5
+      }
+    }
+  },
+  "order_items": {
+    "rows": 1914,
+    "columns": 6,
+    "duplicates": 0,
+    "missing_by_column": {
+      "order_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "food_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "quantity": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "unit_price": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "discount": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "total_price": {
+        "missing": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "orders": {
+    "rows": 1000,
+    "columns": 15,
+    "duplicates": 0,
+    "missing_by_column": {
+      "order_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "customer_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "restaurant_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "order_timestamp": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "order_status": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "subtotal": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "discount_amount": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "delivery_fee": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "tax_amount": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "total_amount": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "payment_method": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "delivery_address": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "estimated_delivery_time": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "actual_delivery_time": {
+        "missing": 37,
+        "pct": 3.7
+      },
+      "cancellation_reason": {
+        "missing": 947,
+        "pct": 94.7
+      }
+    }
+  },
+  "payments": {
+    "rows": 1000,
+    "columns": 5,
+    "duplicates": 0,
+    "missing_by_column": {
+      "order_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "method": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "status": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "amount": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "transaction_reference": {
+        "missing": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "restaurants": {
+    "rows": 50,
+    "columns": 13,
+    "duplicates": 0,
+    "missing_by_column": {
+      "restaurant_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "restaurant_name": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "description": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "city": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "area": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "cuisine": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "rating": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "number_of_reviews": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "average_price": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "delivery_time_minutes": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "distance_km": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "commission_rate": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "restaurant_status": {
+        "missing": 0,
+        "pct": 0.0
+      }
+    }
+  },
+  "reviews": {
+    "rows": 200,
+    "columns": 7,
+    "duplicates": 0,
+    "missing_by_column": {
+      "review_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "customer_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "restaurant_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "food_id": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "rating": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "review_text": {
+        "missing": 0,
+        "pct": 0.0
+      },
+      "created_at": {
+        "missing": 0,
+        "pct": 0.0
+      }
+    }
+  }
+}

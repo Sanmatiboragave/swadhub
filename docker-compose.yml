@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  web:
+    build: ./food-delivery-analytics
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./food-delivery-analytics:/app
+    environment:
+      - PYTHONUNBUFFERED=1

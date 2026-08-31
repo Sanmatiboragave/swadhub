@@ -1,0 +1,122 @@
+[
+  {
+    "category": "Technical",
+    "urgency": "Critical",
+    "confidence": 0.97,
+    "reasoning": "Complete login outage returning 500 errors, blocking the entire team from working.",
+    "needs_human_review": false,
+    "routed_team": "Engineering",
+    "subject": "Site is completely down for our whole team",
+    "id": "T-001"
+  },
+  {
+    "category": "Billing",
+    "urgency": "High",
+    "confidence": 0.93,
+    "reasoning": "Duplicate charge with specific transaction IDs provided; clear refund request with financial impact.",
+    "needs_human_review": false,
+    "routed_team": "Finance",
+    "subject": "Charged twice for August subscription",
+    "id": "T-002"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.85,
+    "reasoning": "Simple how-to question about a UI feature, no urgency indicated.",
+    "needs_human_review": false,
+    "routed_team": "Support (L1)",
+    "subject": "How do I export my data to CSV?",
+    "id": "T-003"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.9,
+    "reasoning": "Feature request explicitly marked as not urgent.",
+    "needs_human_review": false,
+    "routed_team": "Support (L1)",
+    "subject": "Feature request: dark mode",
+    "id": "T-004"
+  },
+  {
+    "category": "Account",
+    "urgency": "High",
+    "confidence": 0.88,
+    "reasoning": "User is locked out of their account with a same-day deadline; password reset flow appears broken.",
+    "needs_human_review": false,
+    "routed_team": "Customer Success",
+    "subject": "Can't reset my password",
+    "id": "T-005"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.4,
+    "reasoning": "User claims urgency but the described issue (button color) is cosmetic; mismatch between stated and actual urgency lowers confidence.",
+    "needs_human_review": true,
+    "routed_team": "Support (L1)",
+    "subject": "urgent!!!",
+    "id": "T-006"
+  },
+  {
+    "category": "Bug Report",
+    "urgency": "High",
+    "confidence": 0.91,
+    "reasoning": "Data mismatch between dashboard and export is a concrete, reproducible bug affecting reported financial totals.",
+    "needs_human_review": false,
+    "routed_team": "Engineering",
+    "subject": "Data export shows wrong totals",
+    "id": "T-007"
+  },
+  {
+    "category": "Billing",
+    "urgency": "Low",
+    "confidence": 0.87,
+    "reasoning": "Routine account information update with no urgency.",
+    "needs_human_review": false,
+    "routed_team": "Finance",
+    "subject": "Need to update billing address",
+    "id": "T-008"
+  },
+  {
+    "category": "Bug Report",
+    "urgency": "Critical",
+    "confidence": 0.55,
+    "reasoning": "Possible cross-user data exposure would be critical if confirmed, but the user themselves is unsure whether it's a real leak or a rendering glitch, warranting review before acting.",
+    "needs_human_review": true,
+    "routed_team": "Engineering",
+    "subject": "Possible security issue",
+    "id": "T-009"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.86,
+    "reasoning": "Sales/pricing question from a prospective enterprise customer, not a support issue requiring urgency.",
+    "needs_human_review": false,
+    "routed_team": "Support (L1)",
+    "subject": "Question about enterprise pricing",
+    "id": "T-010"
+  },
+  {
+    "category": "Bug Report",
+    "urgency": "Medium",
+    "confidence": 0.84,
+    "reasoning": "Reproducible crash on large file uploads across browsers; disruptive but workaround (smaller files) likely exists.",
+    "needs_human_review": false,
+    "routed_team": "Engineering",
+    "subject": "App crashes when uploading large files",
+    "id": "T-011"
+  },
+  {
+    "category": "General Inquiry",
+    "urgency": "Low",
+    "confidence": 0.95,
+    "reasoning": "Positive feedback message, no action required.",
+    "needs_human_review": false,
+    "routed_team": "Support (L1)",
+    "subject": "thanks",
+    "id": "T-012"
+  }
+]
