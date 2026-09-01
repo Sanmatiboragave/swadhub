@@ -19,12 +19,16 @@ BASE = Path(__file__).parent
 INPUT_PATH = BASE / "sample_tickets.json"
 OUTPUT_PATH = BASE / "results" / "output.json"
 
-app = Flask(__name__, template_folder="templates", static_folder="static")
+app = Flask(__name__, template_folder="templates")
 
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    try:
+        return render_template("index.html")
+    except Exception as e:
+        print(f"Template error: {e}")
+        return jsonify({"error": "Template not found", "details": str(e)}), 500
 
 
 @app.route("/results")
