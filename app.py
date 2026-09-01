@@ -56,6 +56,9 @@ def run():
 
 
 if __name__ == "__main__":
-    # Default to port 8000, bind to 0.0.0.0 for containerized deployments
+    # Read PORT from environment (Render sets this)
+    # Default to 8000 for local development
     port = int(os.getenv("PORT", 8000))
-    app.run(host="0.0.0.0", port=port, debug=False)
+    host = "0.0.0.0"  # Required for containerized environments
+    print(f"Starting Flask app on {host}:{port}")
+    app.run(host=host, port=port, debug=False)

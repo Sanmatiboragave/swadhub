@@ -9,11 +9,4 @@ services:
     envVars:
       - key: PYTHONUNBUFFERED
         value: 1
-      - key: PORT
-        value: 8000
     healthCheckPath: /
-    envVarGroups:
-      - name: production
-        envVars:
-          - key: ANTHROPIC_API_KEY
-            sync: false
