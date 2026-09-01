@@ -806,7 +806,7 @@ function buildRestaurants() {
           distance: `${km} km`,
           offer: OFFERS[seed % OFFERS.length],
           tags: seed % 2 === 0 ? ['Bengaluru favourite'] : ['Cloud kitchen'],
-          img: name === "McDonald's Burgers" ? IMAGES.burger : cuisine.img,
+          img: cuisine.img,
           hero: cuisine.hero,
           color: cuisine.color,
         })
