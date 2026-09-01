@@ -44,8 +44,9 @@ def run(input_path: str, output_path: str) -> None:
 
         results.append(result)
 
+    payload = {"tickets": results}
     with open(output_path, "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(payload, f, indent=2)
 
     flagged = sum(1 for r in results if r["needs_human_review"])
     print(f"\nDone. {len(results)} tickets classified, {flagged} flagged for human review.")

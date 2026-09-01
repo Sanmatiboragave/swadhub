@@ -200,7 +200,11 @@ def results():
         if OUTPUT_PATH.exists():
             with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            return jsonify(data)
+            if isinstance(data, list):
+                return jsonify({"tickets": data})
+            if isinstance(data, dict):
+                return jsonify(data)
+            return jsonify({"tickets": []})
         return jsonify({"tickets": []})
     except Exception as e:
         return jsonify({"error": str(e), "tickets": []}), 500
