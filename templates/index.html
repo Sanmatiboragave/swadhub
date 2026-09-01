@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket Triage Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            flex: 1;
+            min-width: 150px;
+            padding: 12px 24px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .status.loading {
+            display: block;
+            background: #e3f2fd;
+            color: #1976d2;
+            border-left: 4px solid #1976d2;
+        }
+        
+        .status.success {
+            display: block;
+            background: #e8f5e9;
+            color: #388e3c;
+            border-left: 4px solid #388e3c;
+        }
+        
+        .status.error {
+            display: block;
+            background: #ffebee;
+            color: #c62828;
+            border-left: 4px solid #c62828;
+        }
+        
+        .results-container {
+            max-height: 500px;
+            overflow-y: auto;
+            background: #f5f5f5;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .result-item h3 {
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .result-item p {
+            margin: 5px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+        
+        .badge-critical {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .badge-high {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .badge-medium {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .badge-low {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .info-box {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Support Ticket Triage</h1>
+            <p>Intelligent ticket classification and routing system</p>
+        </header>
+        
+        <div class="card">
+            <div class="info-box">
+                <strong>ℹ️ Info:</strong> This demo uses a mock classifier (no API key required). 
+                Click "Run Analysis" to process sample tickets.
+            </div>
+            
+            <div class="button-group">
+                <button class="btn-primary" onclick="runAnalysis()">
+                    ▶️ Run Analysis
+                </button>
+                <button class="btn-secondary" onclick="refreshResults()">
+                    🔄 Refresh Results
+                </button>
+            </div>
+            
+            <div id="status" class="status"></div>
+            
+            <div id="results" class="results-container" style="display: none;">
+                <h3>Analysis Results</h3>
+                <div id="resultsList"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        async function runAnalysis() {
+            const statusDiv = document.getElementById('status');
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                statusDiv.className = 'status loading';
+                statusDiv.innerHTML = '<span class="loading-spinner"></span>Processing tickets...';
+                resultsDiv.style.display = 'none';
+                
+                const response = await fetch('/run', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                statusDiv.className = 'status success';
+                statusDiv.innerHTML = '✅ Analysis started! Refreshing results in 2 seconds...';
+                
+                setTimeout(refreshResults, 2000);
+                
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = '❌ Error: ' + error.message;
+                console.error('Error:', error);
+            }
+        }
+        
+        async function refreshResults() {
+            const resultsDiv = document.getElementById('results');
+            const resultsList = document.getElementById('resultsList');
+            
+            try {
+                const response = await fetch('/results');
+                
+                if (!response.ok) {
+                    throw new Error('No results yet. Run analysis first.');
+                }
+                
+                const data = await response.json();
+                
+                if (data.results && Array.isArray(data.results)) {
+                    let html = '';
+                    data.results.forEach((result, index) => {
+                        const urgencyBadgeClass = `badge-${result.urgency.toLowerCase()}`;
+                        html += `
+                            <div class="result-item">
+                                <h3>#${index + 1}: ${result.subject}</h3>
+                                <p><strong>Category:</strong> ${result.category}</p>
+                                <p>
+                                    <strong>Urgency:</strong>
+                                    <span class="badge ${urgencyBadgeClass}">${result.urgency}</span>
+                                </p>
+                                <p><strong>Assigned to:</strong> ${result.routed_to}</p>
+                                <p><strong>Confidence:</strong> ${(result.confidence * 100).toFixed(0)}%</p>
+                                ${result.flagged_for_human_review ? '<p style="color: #c62828;"><strong>⚠️ Flagged for human review</strong></p>' : ''}
+                            </div>
+                        `;
+                    });
+                    resultsList.innerHTML = html;
+                    resultsDiv.style.display = 'block';
+                    document.getElementById('status').style.display = 'none';
+                } else {
+                    throw new Error('Invalid results format');
+                }
+                
+            } catch (error) {
+                const statusDiv = document.getElementById('status');
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = '❌ ' + error.message;
+                resultsDiv.style.display = 'none';
+            }
+        }
+        
+        // Load results on page load
+        window.onload = () => {
+            refreshResults();
+        };
+    </script>
+</body>
+</html>

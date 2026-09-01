@@ -778,22 +778,6 @@ const OFFERS = [
   'Free filter coffee',
 ]
 
-// Map restaurant names to hero images for variety
-const HERO_IMAGE_POOL = [
-  IMAGES.dosa, IMAGES.idli, IMAGES.biryani, IMAGES.chicken, IMAGES.thali,
-  IMAGES.paneer, IMAGES.pizza, IMAGES.burger, IMAGES.sushi, IMAGES.noodles,
-  IMAGES.seafood, IMAGES.bbq, IMAGES.dessert, IMAGES.naan, IMAGES.rolls,
-  IMAGES.thai, IMAGES.korean, IMAGES.lebanese, IMAGES.pasta, IMAGES.waffle,
-  IMAGES.chaat, IMAGES.shawarma, IMAGES.ramen, IMAGES.fish, IMAGES.pav,
-]
-
-function getHeroImageForRestaurant(restaurantName, cuisineHero, seed) {
-  // Create a mix: use cuisine hero as base, but rotate through other images for variety
-  const heroIndex = (seed % (HERO_IMAGE_POOL.length * 2)) % HERO_IMAGE_POOL.length
-  // Every other restaurant keeps cuisine hero, others get variety
-  return seed % 2 === 0 ? cuisineHero : HERO_IMAGE_POOL[heroIndex]
-}
-
 function buildRestaurants() {
   const list = []
   for (const cuisine of CUISINES) {
@@ -823,7 +807,7 @@ function buildRestaurants() {
           offer: OFFERS[seed % OFFERS.length],
           tags: seed % 2 === 0 ? ['Bengaluru favourite'] : ['Cloud kitchen'],
           img: name === "McDonald's Burgers" ? IMAGES.burger : cuisine.img,
-          hero: getHeroImageForRestaurant(name, cuisine.hero, seed),
+          hero: cuisine.hero,
           color: cuisine.color,
         })
       })

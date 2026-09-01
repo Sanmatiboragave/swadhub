@@ -1,0 +1,12 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "python app.py"
+restartPolicyMaxRetries = 5
+healthcheckPath = "/"
+healthcheckInterval = 10
+
+[env]
+PORT = "8000"
+PYTHONUNBUFFERED = "1"
