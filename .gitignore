@@ -1,0 +1,29 @@
+# Node
+node_modules/
+webapp/node_modules/
+webapp/dist/
+
+# Vite / build output
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment files (keep secrets out of git)
+.env
+.env.local
+.env.production.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Logs / misc
+*.log
+npm-debug.log*
