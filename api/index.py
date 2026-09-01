@@ -1,40 +1,38 @@
-from flask import Flask, jsonify
-import json
-import os
 from pathlib import Path
+import json
+import threading
+import os
+import sys
 
-app = Flask(__name__)
-
-# Lazy imports - only when needed
-HAS_BATCH = False
-run_batch = None
-mock_agent = None
-
-def _init_batch():
-    global HAS_BATCH, run_batch, mock_agent
-    if HAS_BATCH:
-        return
-    try:
-        import sys
-        parent_dir = str(Path(__file__).parent.parent)
-        if parent_dir not in sys.path:
-            sys.path.insert(0, parent_dir)
-        import run_batch as rb
-        import mock_agent as ma
-        run_batch = rb
-        mock_agent = ma
-        rb.classify_ticket = ma.classify_ticket
-        HAS_BATCH = True
-    except Exception as e:
-        print(f"Warning: Could not initialize batch: {e}")
+from flask import Flask, jsonify
 
 BASE = Path(__file__).parent.parent
 INPUT_PATH = BASE / "sample_tickets.json"
 OUTPUT_PATH = BASE / "results" / "output.json"
 
-# HTML content embedded
-HTML_CONTENT = """
-<!DOCTYPE html>
+# Lazy load processing modules
+_batch_initialized = False
+_run_batch = None
+
+def _init_batch():
+    global _batch_initialized, _run_batch
+    if _batch_initialized:
+        return
+    try:
+        if str(BASE) not in sys.path:
+            sys.path.insert(0, str(BASE))
+        import run_batch
+        import mock_agent
+        _run_batch = run_batch
+        run_batch.classify_ticket = mock_agent.classify_ticket
+        _batch_initialized = True
+    except Exception as e:
+        print(f"Warning: Could not initialize batch: {e}")
+        _batch_initialized = True
+
+app = Flask(__name__)
+
+HTML_UI = """<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -71,9 +69,10 @@ HTML_CONTENT = """
             border-radius: 4px;
             cursor: pointer;
             font-size: 14px;
+            font-weight: 500;
         }
         button:hover { opacity: 0.9; }
-        .status { margin-bottom: 20px; color: #666; }
+        .status { margin-bottom: 20px; color: #666; font-size: 14px; }
         .loading { color: #667eea; font-weight: bold; }
         .error { color: #e74c3c; }
         .success { color: #27ae60; }
@@ -83,6 +82,8 @@ HTML_CONTENT = """
             border-radius: 4px;
             padding: 20px;
             min-height: 200px;
+            max-height: 500px;
+            overflow-y: auto;
         }
         .ticket-item {
             background: white;
@@ -91,6 +92,8 @@ HTML_CONTENT = """
             margin-bottom: 10px;
             border-radius: 4px;
         }
+        .ticket-item h3 { color: #333; margin-bottom: 8px; }
+        .ticket-item p { color: #666; margin-bottom: 10px; font-size: 13px; }
         .badge {
             display: inline-block;
             padding: 4px 12px;
@@ -98,11 +101,13 @@ HTML_CONTENT = """
             font-size: 12px;
             margin-right: 8px;
             margin-bottom: 8px;
+            font-weight: 500;
         }
         .badge.critical { background: #e74c3c; color: white; }
         .badge.high { background: #f39c12; color: white; }
         .badge.medium { background: #f1c40f; color: #333; }
         .badge.low { background: #3498db; color: white; }
+        .confidence { color: #7f8c8d; font-size: 12px; margin-top: 8px; }
     </style>
 </head>
 <body>
@@ -126,8 +131,6 @@ HTML_CONTENT = """
     <script>
         async function runAnalysis() {
             const statusDiv = document.getElementById('status');
-            const resultsDiv = document.getElementById('results');
-            
             statusDiv.className = 'status loading';
             statusDiv.textContent = '⏳ Running analysis...';
             
@@ -136,9 +139,9 @@ HTML_CONTENT = """
                 const data = await response.json();
                 
                 statusDiv.className = 'status success';
-                statusDiv.textContent = '✅ Analysis started. Refreshing in 3 seconds...';
+                statusDiv.textContent = '✅ Analysis started. Refreshing in 2 seconds...';
                 
-                setTimeout(refreshResults, 3000);
+                setTimeout(refreshResults, 2000);
             } catch (err) {
                 statusDiv.className = 'status error';
                 statusDiv.textContent = '❌ Error: ' + err.message;
@@ -155,34 +158,32 @@ HTML_CONTENT = """
                 
                 if (data.tickets && data.tickets.length > 0) {
                     let html = '';
-                    data.tickets.forEach(ticket => {
-                        const urgencyClass = (ticket.urgency || 'low').toLowerCase();
+                    data.tickets.forEach((ticket, idx) => {
+                        const urgency = (ticket.urgency || 'low').toLowerCase();
                         html += `
                             <div class="ticket-item">
-                                <h3>${ticket.subject || 'Untitled'}</h3>
+                                <h3>#${idx + 1}: ${ticket.subject || 'Untitled'}</h3>
                                 <p>${ticket.description || 'No description'}</p>
                                 <div>
-                                    <span class="badge ${urgencyClass}">${ticket.category || 'Uncategorized'}</span>
-                                    <span class="badge">${ticket.urgency || 'Low'}</span>
+                                    <span class="badge ${urgency}">${ticket.category || 'Uncategorized'}</span>
+                                    <span class="badge">${(ticket.urgency || 'Low').toUpperCase()}</span>
                                 </div>
-                                <small>Confidence: ${(ticket.confidence * 100).toFixed(0)}%</small>
+                                <div class="confidence">Confidence: ${((ticket.confidence || 0) * 100).toFixed(0)}%</div>
                             </div>
                         `;
                     });
                     resultsDiv.innerHTML = html;
                     statusDiv.className = 'status success';
-                    statusDiv.textContent = '✅ Results loaded';
+                    statusDiv.textContent = `✅ Loaded ${data.tickets.length} results`;
                 } else {
                     resultsDiv.innerHTML = '<p>(no results yet)</p>';
-                    statusDiv.textContent = '';
                 }
             } catch (err) {
                 document.getElementById('status').className = 'status error';
-                document.getElementById('status').textContent = '❌ Error loading results: ' + err.message;
+                document.getElementById('status').textContent = '❌ Error: ' + err.message;
             }
         }
 
-        // Auto-refresh results on page load
         window.addEventListener('load', refreshResults);
     </script>
 </body>
@@ -191,45 +192,34 @@ HTML_CONTENT = """
 
 @app.route("/", methods=["GET"])
 def index():
-    """Serve the HTML page"""
-    return HTML_CONTENT, 200, {"Content-Type": "text/html"}
+    return HTML_UI, 200, {"Content-Type": "text/html; charset=utf-8"}
 
-@app.route("/results", methods=["GET"])
+@app.route("/results")
 def results():
-    """Get the latest results"""
     try:
         if OUTPUT_PATH.exists():
             with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            return jsonify(data), 200
-        return jsonify({"tickets": []}), 200
+            return jsonify(data)
+        return jsonify({"tickets": []})
     except Exception as e:
         return jsonify({"error": str(e), "tickets": []}), 500
 
 @app.route("/run", methods=["POST"])
 def run():
-    """Start batch runner"""
     _init_batch()
-    if not HAS_BATCH:
-        return jsonify({"status": "started", "warning": "Batch unavailable, using mock"}), 200
+    if not _batch_initialized or _run_batch is None:
+        return jsonify({"status": "started"}), 202
     
-    import threading
-    
-    def _run():
+    def _process():
         try:
             OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-            run_batch.run(str(INPUT_PATH), str(OUTPUT_PATH))
+            _run_batch.run(str(INPUT_PATH), str(OUTPUT_PATH))
         except Exception as e:
             OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
             with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
                 json.dump({"error": str(e), "tickets": []}, f)
 
-    thread = threading.Thread(target=_run, daemon=True)
+    thread = threading.Thread(target=_process, daemon=True)
     thread.start()
-    return jsonify({"status": "started"}), 200
-
-@app.route("/health", methods=["GET"])
-def health():
-    """Health check"""
-    _init_batch()
-    return jsonify({"status": "healthy", "has_batch": HAS_BATCH}), 200
+    return jsonify({"status": "started"}), 202
